@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Portfolio - Intelligent Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>s
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <div class="intro-container">
+            <div class="intro-content">
+                <h1 class="intro-title">An <i>AI Developer</i> passionate about creating applications with fairness, transparency and sustainability at the core.</h1>
+                <div class="about-text">
+                    <p>
+                        Hi! I'm Rajitha Muthukrishnan, an AI Developer and an aspiring AI Ethicist / Responsible AI Developer.
+                        I explore practical ways to build AI responsibly while continuously expanding my technical and ethical expertise.
+                    </p>
+                </div>
+                <div class="intro-buttons">
+                    <a href="#skills" class="btn btn-primary">Skills</a>
+                    <a href="#projects" class="btn btn-primary">Projects</a>
+                    <a href="#posts" class="btn btn-primary">Posts</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>AI & Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Large Language Models</span>
+                        <span class="skill-tag">Natural Language Processing</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">MLOps</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Typescript</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Scikit-Learn</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AzureML</span>
+                        <span class="skill-tag">Hugging Face</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Jupyter</span>
+                        <span class="skill-tag">OpenShift</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Responsible AI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Explainable AI</span>
+                        <span class="skill-tag">Bias Mitigation</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="posts">
+        <div class="container">
+            <h2 class="section-title">AI Projects</h2>
+            <div class="posts-grid">
+                <article class="post-card terminal-window" data-modal="project1">
+                    <div class="post-content">
+                        <h3 class="post-title">Early Detection of Signs of Anorexia based on Social Media Comments using Incremental Learning</h3>
+                        <p class="post-excerpt">Built ML and Deep Learning models to detect signs of anorexia in Reddit posts using CLEF eRisk 2019 dataset, with online training for real-world adaptability.</p>
+                        <a href="#" class="post-link">
+                            View Project Details
+                            <span class="cursor">▊</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project Details Modal -->
+                <div id="project1" class="modal">
+                    <div class="modal-content terminal-window">
+                        <div class="modal-header">
+                            <div class="terminal-buttons">
+                                <span class="terminal-button close-modal"></span>
+                                <span class="terminal-button"></span>
+                                <span class="terminal-button"></span>
+                            </div>
+                            <div class="terminal-title">Early Detection of Signs of Anorexia based on Social Media Comments using Incremental Learning</div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="project-type">
+                                <span class="label">Project Type:</span>
+                                <span class="tag">Research : Model Development</span>
+                            </div>
+                            
+                            <div class="project-section">
+                            <h4>Tech Stack and Models</h4>
+                                <ul class="tech-list">
+                                    <li>Python</li>
+                                    <li>TensorFlow</li>
+                                    <li>Models : SGDClassifier, Logistic Regression, Support Vector Classifier, Fine-tuned BERT</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-section">
+                                <h4>Core Feature</h4>
+                                <ul>
+                                    <li>Reddit user classification as Anorexic and Non-anorexic</li>
+                                    <li>Online learning for model adaptability</li>
+                                    <li>Data preprocessing and feature extraction</li>
+                                    <li>Model evaluation and comparison</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-section">
+                                <h4>Impacts/Results</h4>
+                                <ul>
+                                    <li>F1 score - 0.66 for the best performing online model</li>
+                                    <li>Early Risk Detection Error rate (peanlize late detection and early misclassification) : 10.96% for the best performing online model</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-section">
+                                <h4>Reference</h4>
+                                <ul>
+                                    <li>
+                                        <a href="https://erisk.irlab.org/2019/index.html" class="reference-link" target="_blank">CLEF eRisk 2019</a>
+                                    </li>
+                                    <li>Losada, David & Crestani, Fabio & Parapar, Javier. (2019). Overview of eRisk 2019 Early Risk Prediction on the Internet. 10.1007/978-3-030-28577-7_27.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-section">
+                                <h4>Code Repository</h4>
+                                <a href="https://github.com/RajithaMuthukrishnan/erisk_anorexia/blob/main/README.md" class="repo-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    View on GitHub
+                                    <span class="cursor">▊</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <article class="post-card terminal-window" data-modal="project2">
+                    <div class="post-content">
+                        <h3 class="post-title">Text Summariser Application</h3>
+                        <p class="post-excerpt">Developed a web app for abstractive text summarization that generates concise, command-based summaries of instructional text.</p>
+                        <a href="#" class="post-link">
+                            View Project Details
+                            <span class="cursor">▊</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 2 Details Modal -->
+                <div id="project2" class="modal">
+                    <div class="modal-content terminal-window">
+                        <div class="modal-header">
+                            <div class="terminal-buttons">
+                                <span class="terminal-button close-modal"></span>
+                                <span class="terminal-button"></span>
+                                <span class="terminal-button"></span>
+                            </div>
+                            <div class="terminal-title">Text Summariser Application</div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="project-type">
+                                <span class="label">Project Type:</span>
+                                <span class="tag">AI/ML Application</span>
+                            </div>
+                            
+                            <div class="project-section">
+                                <h4>Tech Stack</h4>
+                                <ul class="tech-list">
+                                    <li>Fine-tuned BART model</li>
+                                    <li>HuggingFace</li>
+                                    <li>PyTorch</li>
+                                    <li>Django</li>
+                                    <li>Tailwind CSS</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-section">
+                                <h4>Core Features</h4>
+                                <ul>
+                                    <li>Abstractive text summarization</li>
+                                    <li>Command-based summary generation</li>
+                                    <li>User-friendly web interface</li>
+                                    <li>Responsive design</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-section">
+                                <h4>Impacts/Results</h4>
+                                <ul>
+                                    <li>40% Reduction in Review Time</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-section">
+                                <h4>Code Repository</h4>
+                                <a href="https://github.com/RajithaMuthukrishnan/Text_Summarizer_App" class="repo-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    View on GitHub
+                                    <span class="cursor">▊</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <article class="post-card terminal-window" data-modal="project3">
+                    <div class="post-content">
+                        <h3 class="post-title">Semantic segmentation using lightweight Gated-Shape CNN model</h3>
+                        <h2 class="post-subtitle">Urban Scene Understanding for Autonomous Driving</h2>
+                        <p class="post-excerpt">Implemented semantic segmentation using a lightweight two-stream CNN with MobileNetV2 backbone for efficient image analysis.</p>
+                        <a href="#" class="post-link">
+                            View Project Details
+                            <span class="cursor">▊</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 3 Details Modal -->
+                <div id="project3" class="modal">
+                    <div class="modal-content terminal-window">
+                        <div class="modal-header">
+                            <div class="terminal-buttons">
+                                <span class="terminal-button close-modal"></span>
+                                <span class="terminal-button"></span>
+                                <span class="terminal-button"></span>
+                            </div>
+                            <div class="terminal-title">Semantic segmentation using lightweight Gated-Shape CNN model: Urban Scene Understanding for Autonomous Driving</div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="project-type">
+                                <span class="label">Project Type:</span>
+                                <span class="tag">Research: Model Development</span>
+                            </div>
+                            
+                            <div class="project-section">
+                                <h4>Tech Stack and Models</h4>
+                                <ul class="tech-list">
+                                    <li>Python</li>
+                                    <li>TensorFlow</li>
+                                    <li>Keras</li>
+                                    <li>Convolutional Neural Networks</li>
+                                    <li>MobileNetV2</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-section">
+                                <h4>Core Feature</h4>
+                                <ul>
+                                    <li>Semantic segmentation of Cityscapes dataset images</li>
+                                    <li>Lightweight model development with MobileNetV2</li>
+                                    <li>CPU Training</li>
+                                    <li>Aids in Autonomous Driving</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-section">
+                                <h4>Impacts/Results</h4>
+                                <ul>
+                                    <li>Achieved mean Intersection-over-Union (mIoU) of 0.25</li>
+                                </ul>
+                                <div class="impact-images">
+                                    <img src="images/GSCNN_MobileNet_image1.png" alt="GSCNN MobileNet result 1">
+                                    <img src="images/GSCNN_Mobilenet_image2.png" alt="GSCNN MobileNet result 2">
+                                </div>
+                                
+                            </div>
+
+                            <div class="project-section">
+                                <h4>Reference</h4>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.cityscapes-dataset.com/" class="reference-link" target="_blank">Cityscapes Dataset</a>
+                                    </li>
+                                    <li>T. Takikawa, D. Acuna, V. Jampani, S. Fidler, “Gated-SCNN: Gated
+Shape CNN for Semantic Segmentation”, in International Conference
+on Computer Vision, (ICCV), 2019, pp. 5229-5238</li>
+                                    <li>Mark Sandler, Andrew Howard, Menglong Zhu, Andrey Zhmoginov,
+Liang-Chieh Chen, “MobileNetV2: Inverted Residuals and Linear Bottlenecks”,
+in The IEEE Conference on Computer Vision and Pattern
+Recognition (CVPR), 2018, pp. 4510-4520</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-section">
+                                <h4>Code Repository</h4>
+                                <a href="https://github.com/RajithaMuthukrishnan/GSCNN_Mobilenetv2" class="repo-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    View on GitHub
+                                    <span class="cursor">▊</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Posts Section -->
+    <section id="posts" class="posts">
+        <div class="container">
+            <h2 class="section-title">Blog Posts</h2>
+            <div class="posts-grid">
+                <article class="post-card terminal-window">
+                    <div class="post-content">
+                        <h3 class="post-title">Building LLM-Powered Applications Responsibly</h3>
+                        <h4 class="post-subtitle">Sustainable practices for developers building personal projects and prototypes</h4>
+                        <p class="post-excerpt">LLMs are powerful tools, but every API call comes with an unseen cost. This post explores mindful practices to build LLM-powered projects more sustainably.</p>
+                        <a href="posts/post1.html" class="post-link">
+                            Read More
+                            <span class="cursor">▊</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section terminal-style">
+                    <div class="terminal-prompt">
+                        <span class="prompt-sign">$</span>
+                        <span class="prompt-text">connect --social</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/RajithaMuthukrishnan" class="terminal-link" target="_blank">
+                            <span class="command-prefix">>_</span>
+                            <i class="fab fa-github"></i>
+                            <span class="link-text">github/RajithaMuthukrishnan</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rajithamuthukrishnan" class="terminal-link" target="_blank">
+                            <span class="command-prefix">>_</span>
+                            <i class="fab fa-linkedin"></i>
+                            <span class="link-text">linkedin/Rajitha Muthukrishnan</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><span class="prompt-sign">$</span> Rajitha Muthukrishnan AI Portfolio. All rights reserved."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

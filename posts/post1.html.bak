@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Modern Web Development - AI Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .post-container {
+            max-width: 800px;
+            margin: 120px auto 60px;
+            padding: 0 2rem;
+        }
+        
+        .post-content {
+            background: var(--bg-secondary);
+            border: 1px solid var(--accent-green);
+            border-radius: 8px;
+            padding: 2rem;
+            color: var(--text-primary);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-green);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            gap: 0.75rem;
+        }
+
+        .post-header {
+            margin-bottom: 3rem;
+        }
+
+        .post-title {
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .post-body {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-primary);
+        }
+
+        .post-body h2 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--accent-green);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .post-body h3 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--accent-green);
+            margin: 2rem 0 0.75rem;
+        }
+
+        .post-body p {
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .post-body ul, .post-body ol {
+            margin: 1rem 0 1.5rem 2rem;
+            color: var(--text-primary);
+        }
+
+        .post-body li {
+            margin-bottom: 0.75rem;
+        }
+
+        .code-block {
+            background: var(--bg-primary);
+            border: 1px solid var(--accent-green);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-family: 'JetBrains Mono', monospace;
+            overflow-x: auto;
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    </nav>
+
+    <div class="post-content">
+        <a href="../index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Back to Home
+        </a>
+
+        <article class="post-body">
+            <div class="post-header">
+                <h1 class="post-title">Getting Started with Modern Web Development</h1>
+                <div class="post-meta">
+                    <span><i class="fas fa-calendar"></i> December 15, 2024</span>
+                    <span><i class="fas fa-tag"></i> Technology</span>
+                    <span><i class="fas fa-clock"></i> 5 min read</span>
+                </div>
+            </div>
+
+            <p>Web development has evolved tremendously over the past few years. With new frameworks, tools, and best practices emerging constantly, it can be overwhelming for beginners to know where to start. In this comprehensive guide, I'll walk you through the essential technologies and concepts you need to master modern web development.</p>
+
+            <h2>The Foundation: HTML5, CSS3, and JavaScript</h2>
+            
+            <p>Every web developer needs a solid understanding of the three core technologies that power the web:</p>
+
+            <h3>HTML5 - The Structure</h3>
+            <p>HTML5 introduced semantic elements that make your code more meaningful and accessible. Instead of using generic divs everywhere, you can now use elements like:</p>
+
+            <div class="code-block">
+&lt;header&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;h1&gt;Article Title&lt;/h1&gt;
+        &lt;p&gt;Article content...&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;Copyright 2024&lt;/p&gt;
+&lt;/footer&gt;
+            </div>
+
+            <h3>CSS3 - The Style</h3>
+            <p>CSS3 brought powerful features like Flexbox, Grid, animations, and responsive design capabilities. Here's how you can create a responsive layout:</p>
+
+            <div class="code-block">
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+            </div>
+
+            <h3>JavaScript ES6+ - The Behavior</h3>
+            <p>Modern JavaScript (ES6+) introduced features that make code more readable and maintainable:</p>
+
+            <ul>
+                <li><strong>Arrow Functions:</strong> Concise function syntax</li>
+                <li><strong>Destructuring:</strong> Extract values from objects and arrays</li>
+                <li><strong>Template Literals:</strong> String interpolation with backticks</li>
+                <li><strong>Modules:</strong> Import/export functionality</li>
+                <li><strong>Async/Await:</strong> Cleaner asynchronous code</li>
+            </ul>
+
+            <div class="code-block">
+// Arrow functions and destructuring
+const users = [
+    { name: 'John', age: 30 },
+    { name: 'Jane', age: 25 }
+];
+
+const getAdultUsers = users.filter(({ age }) => age >= 18);
+
+// Template literals
+const greeting = `Hello, ${users[0].name}! You are ${users[0].age} years old.`;
+
+// Async/await
+async function fetchUserData(userId) {
+    try {
+        const response = await fetch(`/api/users/${userId}`);
+        const userData = await response.json();
+        return userData;
+    } catch (error) {
+        console.error('Error fetching user:', error);
+    }
+}
+            </div>
+
+            <h2>Essential Tools and Frameworks</h2>
+
+            <h3>Version Control with Git</h3>
+            <p>Git is essential for tracking changes and collaborating with other developers. Learn the basic commands:</p>
+
+            <div class="code-block">
+# Initialize a repository
+git init
+
+# Add files to staging
+git add .
+
+# Commit changes
+git commit -m "Add initial project structure"
+
+# Push to remote repository
+git push origin main
+            </div>
+
+            <h3>Package Managers</h3>
+            <p>Package managers help you install and manage dependencies:</p>
+            <ul>
+                <li><strong>npm:</strong> Node Package Manager (comes with Node.js)</li>
+                <li><strong>yarn:</strong> Alternative package manager with better performance</li>
+                <li><strong>pnpm:</strong> Fast, disk space efficient package manager</li>
+            </ul>
+
+            <h3>Build Tools and Bundlers</h3>
+            <p>Modern web development requires build tools to process your code:</p>
+            <ul>
+                <li><strong>Webpack:</strong> Module bundler and build tool</li>
+                <li><strong>Vite:</strong> Fast build tool with hot module replacement</li>
+                <li><strong>Parcel:</strong> Zero-configuration build tool</li>
+            </ul>
+
+            <h2>Frontend Frameworks</h2>
+
+            <p>While vanilla JavaScript is powerful, frameworks can speed up development:</p>
+
+            <h3>React</h3>
+            <p>React is a library for building user interfaces with components. It uses JSX syntax and has a large ecosystem.</p>
+
+            <h3>Vue.js</h3>
+            <p>Vue.js is progressive and easy to learn, with excellent documentation and a gentle learning curve.</p>
+
+            <h3>Angular</h3>
+            <p>Angular is a full-featured framework with built-in tools for routing, state management, and testing.</p>
+
+            <h2>Backend Development</h2>
+
+            <p>For full-stack development, you'll need to learn backend technologies:</p>
+
+            <h3>Node.js</h3>
+            <p>Node.js allows you to run JavaScript on the server, making it easier to use the same language for frontend and backend.</p>
+
+            <h3>Databases</h3>
+            <p>Choose the right database for your needs:</p>
+            <ul>
+                <li><strong>SQL:</strong> PostgreSQL, MySQL for relational data</li>
+                <li><strong>NoSQL:</strong> MongoDB, Firebase for flexible schemas</li>
+            </ul>
+
+            <h2>Best Practices</h2>
+
+            <h3>Responsive Design</h3>
+            <p>Always design for mobile-first. Use CSS Grid and Flexbox for layouts, and test on multiple devices.</p>
+
+            <h3>Performance Optimization</h3>
+            <ul>
+                <li>Optimize images and use modern formats (WebP, AVIF)</li>
+                <li>Minify CSS and JavaScript</li>
+                <li>Use lazy loading for images</li>
+                <li>Implement caching strategies</li>
+            </ul>
+
+            <h3>Accessibility</h3>
+            <p>Make your websites accessible to everyone:</p>
+            <ul>
+                <li>Use semantic HTML elements</li>
+                <li>Provide alt text for images</li>
+                <li>Ensure proper color contrast</li>
+                <li>Make interactive elements keyboard accessible</li>
+            </ul>
+
+            <h2>Learning Path Recommendations</h2>
+
+            <ol>
+                <li><strong>Start with the basics:</strong> HTML, CSS, and JavaScript fundamentals</li>
+                <li><strong>Learn Git:</strong> Version control is essential for any developer</li>
+                <li><strong>Choose a framework:</strong> Pick one and master it before moving to others</li>
+                <li><strong>Build projects:</strong> Apply your knowledge by creating real projects</li>
+                <li><strong>Learn backend basics:</strong> Understand how servers and databases work</li>
+                <li><strong>Deploy your projects:</strong> Learn about hosting and deployment</li>
+            </ol>
+
+            <h2>Conclusion</h2>
+
+            <p>Modern web development is a vast field, but by focusing on the fundamentals and gradually building your skills, you can become proficient. Remember that the best way to learn is by doing - start building projects as soon as you understand the basics.</p>
+
+            <p>The web development community is incredibly supportive, so don't hesitate to ask questions, contribute to open source projects, and share your learning journey. Happy coding!</p>
+        </article>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
