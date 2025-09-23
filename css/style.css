@@ -757,8 +757,8 @@ html {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .nav-menu {
+@media (max-width: 771px) {
+    /* .nav-menu {
         position: fixed;
         left: -100%;
         top: 70px;
@@ -769,13 +769,13 @@ html {
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
-    }
+    } */
 
-    .nav-menu.active {
+    /* .nav-menu.active {
         left: 0;
-    }
+    } */
 
-    .nav-toggle {
+    /* .nav-toggle {
         display: flex;
     }
 
@@ -789,10 +789,10 @@ html {
 
     .nav-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
-    }
+    } */
 
     .intro-container {
-        padding: 0 20px;
+        padding: 500px 0px 0px 20px;
     }
 
     .intro-content {
@@ -804,13 +804,25 @@ html {
         font-size: 2rem;
     }
 
-    .hero-subtitle {
+    /* .intro-subtitle {
         font-size: 1rem;
-    }
+    } */ 
 
-    .hero-buttons {
+    .intro-buttons {
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    .skills{
+        padding: 10px 0 80px;
+        .container{
+            padding: 500px 0px 0px 10px
+        }
+    }
+
+
+    .posts{
+        padding: 70px 0 50px
     }
 
     .about-content {
@@ -818,14 +830,14 @@ html {
         gap: 2rem;
     }
 
-    .about-stats {
+    /* .about-stats {
         flex-direction: row;
         justify-content: space-around;
-    }
+    } */
 
-    .posts-grid {
+    /* .posts-grid {
         grid-template-columns: 1fr;
-    }
+    } */
 
     .contact-content {
         grid-template-columns: 1fr;
@@ -847,36 +859,44 @@ html {
         padding: 0 15px;
     }
 
-    .hero {
-        padding: 100px 0 60px;
+    .intro {
+        padding: 700px 0px 0px 0px
     }
 
-    .hero-container {
+    .intro-container {
         padding: 0 15px;
     }
 
-    .hero-content {
+    .intro-content {
         padding: 2rem 1.5rem;
         max-width: 400px;
     }
 
-    .page-title {
+    .intro-title {
         font-size: 2rem;
     }
 
-    .hero-subtitle {
-        font-size: 0.95rem;
+    .skills{
+        padding: 700px 0 80px;
     }
+
+    .posts{
+        padding: 0px 0px 80px;
+    }
+
+    /* .hero-subtitle {
+        font-size: 0.95rem;
+    } */
 
     .section-title {
         font-size: 2rem;
     }
 
-    .about-stats {
+    /* .about-stats {
         flex-direction: column;
-    }
+    } */
 
-    .hero-buttons {
+    .intro-buttons {
         flex-direction: column;
         align-items: center;
     }
