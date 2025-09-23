@@ -804,10 +804,6 @@ html {
         font-size: 2rem;
     }
 
-    /* .intro-subtitle {
-        font-size: 1rem;
-    } */ 
-
     .intro-buttons {
         justify-content: center;
         flex-wrap: wrap;
@@ -830,15 +826,6 @@ html {
         gap: 2rem;
     }
 
-    /* .about-stats {
-        flex-direction: row;
-        justify-content: space-around;
-    } */
-
-    /* .posts-grid {
-        grid-template-columns: 1fr;
-    } */
-
     .contact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -860,7 +847,7 @@ html {
     }
 
     .intro {
-        padding: 700px 0px 0px 0px
+        height: unset
     }
 
     .intro-container {
@@ -877,24 +864,18 @@ html {
     }
 
     .skills{
-        padding: 700px 0 80px;
+        .container{
+            padding: 0 15px;
+        }
     }
 
     .posts{
         padding: 0px 0px 80px;
     }
 
-    /* .hero-subtitle {
-        font-size: 0.95rem;
-    } */
-
     .section-title {
         font-size: 2rem;
     }
-
-    /* .about-stats {
-        flex-direction: column;
-    } */
 
     .intro-buttons {
         flex-direction: column;
