@@ -529,11 +529,21 @@ html {
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
+    position: relative;
 }
 
 .post-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 255, 156, 0.1);
+}
+
+/* Unified post card cover styling */
+.post-card-cover {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px 8px 0 0;
 }
 
 .post-content {
