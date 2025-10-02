@@ -1,392 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Building LLM-Powered Applications Responsibly</title>
-    <link rel="canonical" href="https://rajithamuthukrishnan.github.io/blog-posts/building-llm-powered-apps.html" />
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .post-container {
-            max-width: 1200px;
-            width: 90%;
-            margin: 120px auto 60px;
-            padding: 0;
-        }
-        
-        .post-content {
-            background: var(--bg-secondary);
-            border: 1px solid var(--accent-green);
-            border-radius: 8px;
-            padding: 3rem;
-            color: var(--text-primary);
-        }
-
-        /* Responsive styles */
-        @media (max-width: 1400px) {
-            .post-container {
-                max-width: 1000px;
-            }
-        }
-
-        @media (max-width: 1200px) {
-            .post-container {
-                max-width: 90%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .post-container {
-                width: 95%;
-                margin: 100px auto 40px;
-            }
-            
-            .post-content {
-                padding: 2rem;
-            }
-
-            .post-title {
-                font-size: 2rem;
-            }
-
-            .post-subtitle {
-                font-size: 1.5rem;
-            }
-
-            .post-body {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .post-container {
-                width: 100%;
-                margin: 80px auto 30px;
-            }
-            
-            .post-content {
-                padding: 1.5rem;
-                border-radius: 0;
-            }
-
-            .code-block {
-                margin: 1rem -1.5rem;
-                border-radius: 0;
-                border-left: none;
-                border-right: none;
-            }
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--accent-green);
-            text-decoration: none;
-            font-weight: 500;
-            margin-bottom: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .back-link:hover {
-            gap: 0.75rem;
-            opacity: 0.9;
-        }
-
-        .post-header {
-            margin-bottom: 3rem;
-        }
-
-        /* Cover image similar to Medium hero image */
-        .post-cover {
-            width: 100%;
-            height: 480px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(116,169,132,0.08);
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            .post-cover {
-                height: 420px;
-                border-radius: 0;
-                margin-bottom: 1.25rem;
-            }
-        }
-
-        .post-title {
-            font-size: 2.5rem;
-            font-weight: 500;
-            color: var(--accent-green);
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
-
-        .post-subtitle {
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: var(--accent-green);
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
-
-        .post-meta {
-            display: flex;
-            gap: 2rem;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .post-body {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-primary);
-        }
-
-        .post-body h2 {
-            font-size: 1.8rem;
-            font-weight: 500;
-            color: var(--accent-green);
-            margin: 2.5rem 0 1rem;
-        }
-
-        .post-body h3 {
-            font-size: 1.4rem;
-            font-weight: 500;
-            color: var(--accent-blue);
-            margin: 2rem 0 0.75rem;
-        }
-
-        .post-body p {
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
-        }
-
-        .post-body ul, .post-body ol {
-            margin: 1rem 0 1.5rem 2rem;
-            color: var(--text-primary);
-        }
-
-        .post-body li {
-            margin-bottom: 0.75rem;
-        }
-
-        .code-block {
-            background: var(--bg-primary);
-            border: 1px solid var(--accent-blue);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            font-family: 'JetBrains Mono', monospace;
-            overflow-x: auto;
-            color: var(--text-primary);
-        }
-
-        .code-block:hover {
-            border-color: var(--accent-green);
-            background: var(--hover-blue);
-            transition: all 0.3s ease;
-        }
-
-        pre {
-            margin: 0;
-        }
-
-        code {
-            font-family: 'JetBrains Mono', monospace;
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
+    <link
+      rel="canonical"
+      href="https://rajithamuthukrishnan.github.io/blog-posts/building-llm-powered-apps.html"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              zenBlack: "#1e1e24", // Zen black
+              zenGray: "#2a2a32", // Softer dark gray
+              zenGreen: "#74a984", // Accent Green
+              zenGreenLight: "#a2c8ad", // Hover green
+              zenText: "#e0e0e0", // Off-white text
+              zenBlue: "#8aa3c7",
+            },
+            fontFamily: {
+              mono: ["JetBrains Mono", 'Consolas', 'Courier New', "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <!-- <body> -->
+  <body class="bg-zenBlack text-zenText font-mono">
+    <!-- Navbar -->
+    <nav
+      class="w-full border-b border-zenGreen px-6 py-4 flex justify-between items-center"
+    >
+      <div class="text-zenGreen font-semibold">Blog</div>
+      <a
+        href="../index.html"
+        class="text-zenGreen hover:underline flex items-center space-x-2"
+      >
+        <i class="fas fa-arrow-left"></i><span> Back to Posts</span>
+      </a>
     </nav>
+    <!-- Post Container -->
+    <div class="max-w-5xl mx-auto mt-10 px-4">
+      <article
+        class="border border-zenGreen rounded-lg bg-zenBlack p-6 md:p-10"
+      >
+        <!-- Post Header -->
+        <header class="mb-8">
+          <h1 class="text-3xl md:text-4xl font-bold text-zenGreen mb-3">
+            Building LLM-Powered Applications Responsibly
+          </h1>
+          <h2 class="text-xl md:text-2xl text-zenBlue font-medium mb-2">
+            Sustainable practices for developers building personal projects and
+            prototypes
+          </h2>
+          <div class="text-zenText text-sm">
+            Last Modified: <span id="lastModifiedDate">Loading...</span>
+          </div>
+        </header>
+        <!-- Cover Image -->
+        <img
+          src="../images/Sustainable_AI_RM.png"
+          alt="Sustainable AI"
+          class="w-full h-72 md:h-96 object-cover rounded mb-6"
+        />
 
-    <div class="post-container">
-        <article class="post-content">
-            <a href="../index.html" class="back-link">
-                <i class="fas fa-arrow-left"></i>
-                Back to Posts
-            </a>
+        <!-- Post Body -->
+        <div class="space-y-6 leading-relaxed">
+          <h2 class="text-2xl font-semibold text-zenBlue mt-6">Overview</h2>
+          <p class="text-lg font-light">
+            Large Language Models (LLMs) have not only revolutionized the tech
+            industry, but also transformed various businesses at every scale.
+            From powering chatbots to enhancing productivity tools, LLMs are
+            quickly becoming indispensable. Developers are building prototypes,
+            and students are showcasing their skills in LLM-powered portfolio
+            projects.
+          </p>
+          <p class="text-lg font-light">
+            Responsible AI has been brought to the limelight, and developers are
+            consciously building applications that ensure fairness and
+            transparency. It is important to remember that sustainability also
+            plays an equally vital role in Responsible AI.
+          </p>
+          <p class="text-lg font-light">
+            LLMs are powerful, but developing with them comes at a cost - both
+            environmentally and ethically. As you may know, every time we test
+            an application with a cloud LLM, powerful GPUs in massive data
+            centers spin up, consuming large amounts of energy. It is easy to
+            forget this invisible impact.
+          </p>
+          <p class="text-lg font-light">
+            This blog post highlights a few sustainability-focused, mindful
+            practices for developers, especially those building
+            <i><b>basic LLM prototypes and personal projects</b></i
+            >. By adopting these practices, we can reduce our environmental
+            footprint without slowing down innovation.
+          </p>
+
+          <h2 class="text-2xl font-semibold text-zenBlue mt-6">Environmental Impacts</h2>
+            <p class="text-lg font-light">
+                Every time we send a request to a LLM, it is easy to forget what happens behind the scenes. 
+                Powerful GPUs are engaged in distant data centers, consuming electricity, generating heat, and using water for cooling. 
+                We enjoy the productivity boost LLMs provide, but the environmental costs are significant:
+                <ul class="text-lg font-light list-disc">
+                    <li class="mb-2"><b><i>Training</i></b> large LLMs consumes millions of kilowatts of electricity, an amount comparable to powering small towns for weeks. </li>
+                    <li class="mb-2"><b><i>Inference</i></b> (answering user queries) adds up quickly - with thousands of queries per second worldwide, data centers draw continuous megawatts of power.</li>
+                    <li class="mb-2"><b><i>Cooling</i></b> the servers often requires large amounts of water, as LLM servers generate immense heat while processing requests. </li>
+                </ul>
+                Every API call feels small, but globally, it adds up to a massive environmental load.
+            </p>
             
-            <header class="post-header">
-                <h1 class="post-title">Building LLM-Powered Applications Responsibly</h1>
-                <h2 class="post-subtitle">Sustainable practices for developers building personal projects and prototypes</h2>
-                <div class="post-meta">
-                    <span class="post-date" id="lastModifiedDate">Last Modified: Loading...</span>
-                    <!-- <span class="post-category">Category: Technology</span> -->
-                </div>
-            </header>
+            <h2 class="text-2xl font-semibold text-zenBlue mt-6">Sustainability in AI</h2>
+            <p class="text-lg font-light">
+                When building prototypes, developers often run applications dozens or even hundreds of times a day. 
+                Each run, each test, each minor tweak can trigger an LLM request, significantly increasing the load on the LLM servers. 
+                These test calls might seem negligible, but they contribute to a substantial environmental footprint.
+            </p>
+            <p class="text-lg font-light">
+                Although AI providers are working hard to continuously monitor and mitigate these challenges, as developers, we share the responsibility to reduce unnecessary server load whenever possible.
+            </p>
 
-            <!-- Cover image -->
-            <img src="../images/Sustainable_AI_RM.png" alt="Sustainable AI" class="post-cover">
+          <h2 class="text-2xl font-semibold text-zenBlue mt-6">
+            Best Practices for Sustainable LLM Application Development
+          </h2>
 
+          <h3 class="text-xl font-medium text-zenGreen">
+            1. Use smaller or local models for prototyping (if your machine permits)
+          </h3>
+          <p class="text-lg font-light">
+            Instead of using large cloud based models (GPT, Gemini, Claude, etc.), start with lightweight open-source models when building simple LLM applications. 
+            <ul class="text-lg font-light list-disc">
+              <li>Why?:</li>
+              <p class="text-lg font-light mb-4">The open-source lightweight models like <b><i>Mistral 7B</i></b> or <b><i>Phi-3-mini</i></b> can run on a laptop CPU or a modest GPU. 
+                Tools like <b><i>Ollama</i></b> or <b><i>LMStudio</i></b> make it easy to set up the open source models locally.</p> 
+              <li>Example:</li>
+               <p class="text-lg font-light mb-4">For a chatbot portfolio project or a simple agent prototype, use a local model during development. Switch to a cloud-based model later, if needed.</p>
+              <li>Impact:</h4>
+              <p class="text-lg font-light mb-4">Reduces the load on flagship cloud based LLM servers and reliance on high-energy data centers during early development.</p>
+            </ul>
+          </p>
+            
 
-            <div class="post-body">
-                <h2>Overview</h2>
-                <p>Large Language Models (LLMs) have not only revolutionized the tech industry, but also transformed various businesses at every scale.
-                    From powering chatbots to enhancing productivity tools, LLMs are quickly becoming indispensable.
-                    Developers are building prototypes, and students are showcasing their skills in LLM-powered portfolio projects.
-                </p>
-                <p>Responsible AI has been brought to the limelight, and developers are consciously building applications that ensure fairness and transparency.
-                   It is important to remember that sustainability also plays an equally vital role in Responsible AI. 
-                </p>
-                <p>
-                    LLMs are powerful, but developing with them comes at a cost - both environmentally and ethically.
-                    As you may know, every time we test an application with a cloud LLM, powerful GPUs in massive data centers spin up, consuming large amounts of energy. 
-                    It is easy to forget this invisible impact.
-                </p>
-                <p>
-                    This blog post highlights a few sustainability-focused, mindful practices for developers, especially those building <i><b>basic LLM prototypes and personal projects</b></i>.
-                    By adopting these practices, we can reduce our environmental footprint without slowing down innovation.
-                </p>
-
-                <h2>Environmental Impacts</h2>
-                <p>
-                    Every time we send a request to a LLM, it is easy to forget what happens behind the scenes. 
-                    Powerful GPUs are engaged in distant data centers, consuming electricity, generating heat, and using water for cooling. 
-                    We enjoy the productivity boost LLMs provide, but the environmental costs are significant:
-                    <ul>
-                        <li><b><i>Training</i></b> large LLMs consumes millions of kilowatts of electricity, an amount comparable to powering small towns for weeks. </li>
-                        <li><b><i>Inference</i></b> (answering user queries) adds up quickly - with thousands of queries per second worldwide, data centers draw continuous megawatts of power.</li>
-                        <li><b><i>Cooling</i></b> the servers often requires large amounts of water, as LLM servers generate immense heat while processing requests. </li>
-                    </ul>
-                    Every API call feels small, but globally, it adds up to a massive environmental load.
-                </p>
-
-                <h2>Sustainability in AI</h2>
-                <p>
-                    When building prototypes, developers often run applications dozens or even hundreds of times a day. 
-                    Each run, each test, each minor tweak can trigger an LLM request, significantly increasing the load on the LLM servers. 
-                    These test calls might seem negligible, but they contribute to a substantial environmental footprint.
-                </p>
-                <p>
-                    Although AI providers are working hard to continuously monitor and mitigate these challenges, as developers, we share the responsibility to reduce unnecessary server load whenever possible.
-                </p>
-
-                <h2>Best Practices for Sustainable LLM Application Development</h2>
-                    <h3>1. Use smaller or local models for prototyping (if your machine permits)</h3>
-                    <p>
-                        Instead of using large cloud based models (GPT, Gemini, Claude, etc.), start with lightweight open-source models when building simple LLM applications. 
-                        <h4>Why?</h4>
-                           <p>The open-source lightweight models like <b><i>Mistral 7B</i></b> or <b><i>Phi-3-mini</i></b> can run on a laptop CPU or a modest GPU. 
-                            Tools like <b><i>Ollama</i></b> or <b><i>LMStudio</i></b> make it easy to set up the open source models locally.</p> 
-                        <h4>Example</h4>
-                            <p>For a chatbot portfolio project or a simple agent prototype, use a local model during development. Switch to a cloud-based model later, if needed.</p>
-                        <h4>Impact</h4>
-                            <p>Reduces the load on flagship cloud based LLM servers and reliance on high-energy data centers during early development.</p>
-                    </p>
-
-                    <h3>2. Mock Responses During Testing</h3>
-                    <p>
-                        Instead of pinging the LLM for every test run, simulate the model's response. 
-                        <h4>Why?</h4>
-                           <p>We don't need a real LLM response to check things like database writes, API calls or front-end rendering.</p> 
-                        <h4>Example</h4>
-<div class="code-block">
-<pre><code>def mock_llm(prompt):
+          <h3 class="text-xl font-medium text-zenGreen">2. Mock Responses During Testing</h3>
+           <p class="text-lg font-light">
+            Instead of pinging the LLM for every test run, simulate the model's response. 
+            <ul class="text-lg font-light list-disc">
+              <li>Why?:</li>
+                <p class="text-lg font-light mb-4">We don't need a real LLM response to check things like database writes, API calls or front-end rendering.</p> 
+            <li>Example:</li>
+          <div
+            class="bg-black border border-zenGreen rounded p-4 font-mono text-sm overflow-x-auto mb-4"
+          >
+            <pre><code>def mock_llm(prompt):
     return {"content": "[MOCK RESPONSE for: " + prompt[:30] + "... ]"}
 </code></pre>
-</div>
-                        <h4>Impact</h4>
-                            <p>Reduces unnecessary LLM calls during application debugging, front-end integration, resulting in lower server strain.</p>
-                    </p>
+          </div>
+          <li>Impact:</li>
+            <p class="text-lg font-light mb-4">Reduces unnecessary LLM calls during application debugging, front-end integration, resulting in lower server strain.</p>
+            </ul>
+        </p>
 
-                    <h3>3. Cache and Reuse Responses</h3>
-                    <p>
-                        Store common LLM prompts and repeated responses locally in a database or a file cache.
-                        <h4>Why?</h4>
-                           <p>Many prompts are static, so there is no need to recompute if the LLM's answer is going to be the same.</p> 
-                        <h4>Example</h4>
-                            <p>Cache common user FAQs in a Database and serve it directly.</p>
-                        <h4>Impact</h4>
-                            <p>Cuts down redundant calls to the LLM, improving latency and user experience.</p>
-                    </p>
-
-                    <h3>4. Batch requests where possible</h3>
-                    <p>
-                        Instead of sending multiple individual requests to the LLM, batch them together.
-                        <h4>Why?</h4>
-                           <p>Fewer API calls reduces server overhead and energy use per request.</p> 
-                        <h4>Example</h4>
-                            <p>Instead of 10 separate, say, text classification calls, send one batched array of 10 texts.</p>
-                        <h4>Impact</h4>
-                            <p>Improves efficiency, enabling faster application pipelines and lowers environmental load.</p>
-                    </p>
-
-                    <h3>5. Be intentional with LLM use</h3>
-                    <p>
-                        Not every task requires an LLM. Sometimes simpler Machine Learning (ML) models or tools are enough.
-                        <h4>Why?</h4>
-                           <p>Tools like Regex, rules, or small ML models often solve niche problems with far less computation.</p> 
-                        <h4>Example</h4>
-                            <ul>
-                                <li>Validating an email address could be achieved with Regex.</li>
-                                <li>Splitting text by paragraphs could be achieved with string operations.</li>
-                                <li>Performing Sentiment Analysis or Classification could be achieved with small fine-tuned models instead of LLMs.</li>
-                            </ul>
-                        <h4>Impact</h4>
-                            <p>Saves LLM resources for tasks where they truly add value.</p>
-                    </p>
+          <h3 class="text-xl font-medium text-zenGreen">3. Cache and Reuse Responses</h3>
+          <p class="text-lg font-light">
+                Store common LLM prompts and repeated responses locally in a database or a file cache.
+                <ul class="text-lg font-light list-disc">
+                  <li>Why?</li>
+                    <p class="text-lg font-light mb-4">Many prompts are static, so there is no need to recompute if the LLM's answer is going to be the same.</p> 
+                  <li>Example</li>
+                    <p class="text-lg font-light mb-4">Cache common user FAQs in a Database and serve it directly.</p>
+                  <li>Impact</li>
+                    <p class="text-lg font-light mb-4">Cuts down redundant calls to the LLM, improving latency and user experience.</p>
+                </ul>
                 
-                <h2>Conclusion</h2>
-                <p>We often focus on building features quickly, iterating fast and pushing the boundaries of what LLMs can do. 
+            </p>
+
+          <h3 class="text-xl font-medium text-zenGreen">4. Batch requests where possible</h3>
+          <p class="text-lg font-light">
+                Instead of sending multiple individual requests to the LLM, batch them together.
+                <ul class="text-lg font-light list-disc">
+                  <li>Why?</li>
+                    <p class="text-lg font-light mb-4">Fewer API calls reduces server overhead and energy use per request.</p> 
+                  <li>Example</li>
+                      <p class="text-lg font-light mb-4">Instead of 10 separate, say, text classification calls, send one batched array of 10 texts.</p>
+                  <li>Impact</li>
+                      <p class="text-lg font-light mb-4">Improves efficiency, enabling faster application pipelines and lowers environmental load.</p>
+                </ul>
+               
+            </p>
+
+            <h3 class="text-xl font-medium text-zenGreen">5. Be intentional with LLM use</h3>
+                    <p class="text-lg font-light">
+                        Not every task requires an LLM. Sometimes simpler Machine Learning (ML) models or tools are enough.
+                        <ul class="text-lg font-light list-disc">
+                          <li>Why?</li>
+                           <p class="text-lg font-light mb-4">Tools like Regex, rules, or small ML models often solve niche problems with far less computation.</p> 
+                          <li>Example</li>
+                              <ul class="text-md font-light list-inside mb-4">
+                                  <li class="text-md mb-1">- Validating an email address could be achieved with Regex.</li>
+                                  <li class="text-md mb-1">- Splitting text by paragraphs could be achieved with string operations.</li>
+                                  <li class="text-md mb-1">- Performing Sentiment Analysis or Classification could be achieved with small fine-tuned models instead of LLMs.</li>
+                              </ul>
+                          <li>Impact</li>
+                              <p class="text-lg font-light mb-4">Saves LLM resources for tasks where they truly add value.</p>
+                        </ul>
+                        
+                    </p>
+
+          <h2 class="text-2xl font-semibold text-zenBlue mt-6">Conclusion</h2>
+          <p class="text-lg font-light">We often focus on building features quickly, iterating fast and pushing the boundaries of what LLMs can do. 
                     But every test run and API call has a hidden cost: energy, water, and carbon emissions. 
                     By making simple but intentional and conscious choices, we can significantly reduce our footprint.</p>
-                <p>Start small:
-                    <ul>
+                <p class="text-lg font-light">Start small:
+                    <ul class="text-lg list-disc list-inside">
                         <li>Swap in a local model for prototyping, when possible.</li>
                         <li>Add a mock response in testing pipeline.</li>
                         <li>Cache repeated queries and batch API calls.</li>
                     </ul>
                 </p>
-                <p>Responsible AI is not just about fairness and transparency - it's also about sustainability. 
+                <p class="text-lg font-light">Responsible AI is not just about fairness and transparency - it's also about sustainability. 
                     Next time an application is developed or tested, it must be remembered that the choices made ripple far beyond the laptop. 
                     Let's ensure that responsibility is at the core of how we code.</p>
-            </div>
-        </article>
+        </div>
+      </article>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section terminal-style">
-                    <div class="terminal-prompt">
-                        <span class="prompt-sign">$</span>
-                        <span class="prompt-text">connect --social</span>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/RajithaMuthukrishnan" class="terminal-link" target="_blank">
-                            <span class="command-prefix">>_</span>
-                            <i class="fab fa-github"></i>
-                            <span class="link-text">github/RajithaMuthukrishnan</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/rajithamuthukrishnan" class="terminal-link" target="_blank">
-                            <span class="command-prefix">>_</span>
-                            <i class="fab fa-linkedin"></i>
-                            <span class="link-text">linkedin/Rajitha Muthukrishnan</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p><span class="prompt-sign">$</span> Rajitha Muthukrishnan AI Portfolio. All rights reserved."</p>
-            </div>
-        </div>
-    </footer>
+   <!-- Footer -->
+    <footer class="bg-zenBlack text-zenGreen border-t border-zenGreen py-4 mt-8">
+  <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
+    <p class="text-sm text-gray-400 mb-2 sm:mb-0">
+      © 2025 Rajitha Muthukrishnan | Built with TailwindCSS
+    </p>
+    <div class="flex space-x-6">
+      <!-- GitHub -->
+      <a href="https://github.com/RajithaMuthukrishnan" target="_blank" 
+         class="flex items-center hover:text-white transition">
+        <i class="fab fa-github text-lg mr-2"></i> GitHub
+      </a>
 
-    <script src="../js/script.js"></script>
-</body>
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/rajithamuthukrishnan" target="_blank" 
+         class="flex items-center hover:text-white transition">
+        <i class="fab fa-linkedin text-lg mr-2"></i> LinkedIn
+      </a>
+    </div>
+  </div>
+</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+  <script>
+    // Last modified date
+    const lastModifiedString = document.lastModified;
+    const lastModifiedDate = new Date(lastModifiedString);
+    const options = { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+    };
+    const formattedDate = lastModifiedDate.toLocaleDateString(undefined, options);
+    document.getElementById("lastModifiedDate").textContent = formattedDate;
+  </script>
+  </body>
 </html>
