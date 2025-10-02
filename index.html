@@ -277,8 +277,8 @@
                 </div>
                 <!-- Video -->
                 <div>
-                    <video id="project2Video" controls class="w-full rounded">
-                    <source src="images/SummaryToolDemo.mp4" type="video/mp4">
+                    <video id="project2Video" controls preload="auto" playsinline class="w-full rounded">
+                    <source src="assets/STDemo.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                     </video>
                 </div>
@@ -471,8 +471,8 @@
                 </div>
                 <!-- Images -->
                 <div class="grid grid-cols-2 gap-4">
-                    <img src="images/GSCNN_MobileNet_image1.png" alt="GSCNN MobileNet result 1" class="rounded shadow" />
-                    <img src="images/GSCNN_Mobilenet_image2.png" alt="GSCNN MobileNet result 2" class="rounded shadow" />
+                    <img src="assets/GSCNN_MobileNet_image1.png" alt="GSCNN MobileNet result 1" class="rounded shadow" />
+                    <img src="assets/GSCNN_Mobilenet_image2.png" alt="GSCNN MobileNet result 2" class="rounded shadow" />
                 </div>
 
                 <!-- References -->
@@ -520,20 +520,20 @@ Recognition (CVPR), 2018, pp. 4510-4520</li>
     <!-- Posts Section -->
     <section id="posts" class="py-20 bg-zenBlack">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-light text-center mb-12">Blog Posts</h2>
+      <h2 class="text-4xl font-light text-center mb-12">Blog Posts</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <!-- Blog Card -->
         <article class="bg-zenGray border border-zenGreen rounded-lg overflow-hidden hover:-translate-y-1 shadow-lg transition">
-          <img src="images/Sustainable_AI_RM.png" alt="Sustainable AI cover" class="w-full aspect-video object-cover">
+          <img src="assets/Sustainable_AI_RM.png" alt="Sustainable AI cover" class="w-full aspect-video object-cover">
           <div class="p-6">
             <h3 class="text-zenGreen text-xl mb-2">Building LLM-Powered Applications Responsibly</h3>
-            <h4 class="text-zenGreen text-md mb-2">Sustainable practices for developers building personal projects and prototypes</h4>
-            <p class="text-zenText text-sm mb-4">
+            <h4 class="text-zenGreen text-lg mb-2">Sustainable practices for developers building personal projects and prototypes</h4>
+            <p class="text-zenText text-md mb-4">
               LLMs are powerful tools, but every API call comes with an unseen cost. This post explores mindful practices to build LLM-powered projects more sustainably.
             </p>
             <a href="blog-posts/building-llm-powered-apps.html" 
-               class="inline-flex items-center text-zenGreen hover:underline">
+               class="inline-flex items-center text-zenGreenLight hover:text-zenGreen">
               Read More <span class="ml-2">▊</span>
             </a>
           </div>
