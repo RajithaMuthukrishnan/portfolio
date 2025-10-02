@@ -1,15 +1,54 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajitha Muthukrishnan - Portfolio</title>
+    <title>XXX - Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta name="google-site-verification" content="QyC2aCk3LOXG7u9-lYrRpxgsiXVUdpBXkkl1BxuaU9c" />
-</head>
-<body>
+</head> -->
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="QyC2aCk3LOXG7u9-lYrRpxgsiXVUdpBXkkl1BxuaU9c" />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <title>Rajitha Muthukrishnan | AI Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+        extend: {
+            colors: {
+            zenBlack: "#1e1e24",   // Zen black
+            zenGray: "#2a2a32",    // Softer dark gray
+            zenGreen: "#74a984",   // Accent Green
+            zenGreenLight: "#33FF99", // Hover green
+            zenText: "#e0e0e0",   // Off-white text
+            zenBlue: "#8aa3c7",
+
+            // --bg-primary: #1e1e24;
+            // --bg-secondary: #2a2a32;
+            // --text-primary: #e0e0e0;
+            // --text-secondary: #a0a0a0;
+            // --accent-green: #74a984;
+            // --accent-blue: #8aa3c7;
+            // --hover-green: rgba(116, 169, 132, 0.1);
+            },
+            fontFamily: {
+                mono: ['Fira Code', 'JetBrains Mono', 'monospace'],
+            }
+        }
+        }
+    }
+    </script>
+    </head>
+    <body class="bg-zenBlack text-zenText font-mono">
+<!-- <body> -->
     <!-- Navigation -->
     <!-- <nav class="navbar">
         <div class="nav-container">
@@ -22,7 +61,7 @@
     </nav>  -->
 
     <!-- Intro Section -->
-    <section class="intro">
+    <!-- <section class="intro">
         <div class="intro-container">
             <div class="intro-content">
                 <h1 class="intro-title">An <i>AI Developer</i> passionate about creating applications with fairness, transparency and sustainability at the core.</h1>
@@ -39,10 +78,28 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+    <section class="flex items-center justify-center h-screen px-6">
+    <div class="max-w-3xl text-center">
+      <h1 class="text-xl font-light md:text-4xl mb-10 leading-snug">
+        An <i>AI Developer</i> passionate about creating applications with 
+        fairness, transparency and sustainability.
+      </h1>
+      <p class="text-xl leading-snug">
+        Hi! I'm <span class="font-semibold">Rajitha Muthukrishnan</span>, an AI Developer and aspiring 
+        AI Ethicist. I explore practical ways to build AI responsibly while 
+        continuously expanding my expertise.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="#skills" class="px-5 py-2 rounded-md bg-zenGreen text-black hover:bg-green-300">Skills</a>
+        <a href="#projects" class="px-5 py-2 rounded-md bg-zenGreen text-black hover:bg-green-300">Projects</a>
+        <a href="#posts" class="px-5 py-2 rounded-md bg-zenGreen text-black hover:bg-green-300">Posts</a>
+      </div>
+    </div>
+  </section>
 
      <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <!-- <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-title">Skills & Expertise</h2>
             <div class="skills-grid">
@@ -103,14 +160,85 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
+     <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-zenBlack">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-light text-center text-zenText mb-12">Skills & Expertise</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Skill Card -->
+        <div class="bg-zenGray border border-zenGreen rounded-lg p-6 hover:-translate-y-1 transition">
+          <h3 class="text-zenGreen text-xl mb-4">AI & Machine Learning</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">LLMs</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">RAG</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">NLP</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Deep Learning</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Machine Learning</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Computer Vision</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">MLOps</span>
+          </div>
+        </div>
+
+        <!-- Add more skill cards here -->
+         <div class="bg-zenGray border border-zenGreen rounded-lg p-6 hover:-translate-y-1 transition">
+          <h3 class="text-zenGreen text-xl mb-4">Programming Languages</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Python</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">SQL</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Java</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Typescript</span>
+          </div>
+        </div>
+
+        <div class="bg-zenGray border border-zenGreen rounded-lg p-6 hover:-translate-y-1 transition">
+          <h3 class="text-zenGreen text-xl mb-4">Frameworks & Libraries</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Scikit-Learn</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">TensorFlow</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Keras</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">LangChain</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Django</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Flask</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Angular</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Express.js</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">TailwindCSS</span>
+          </div>
+        </div>
+
+        <div class="bg-zenGray border border-zenGreen rounded-lg p-6 hover:-translate-y-1 transition">
+          <h3 class="text-zenGreen text-xl mb-4">Tools & Platforms</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">AzureML</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">HuggingFace</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Docker</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">OpenShift</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Docker</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Git</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Jupyter</span>
+          </div>
+        </div>
+
+        <div class="bg-zenGray border border-zenGreen rounded-lg p-6 hover:-translate-y-1 transition">
+          <h3 class="text-zenGreen text-xl mb-4">Responsible AI</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">ExplainableAI</span>
+            <span class="px-3 py-1 bg-zenBlack border border-zenGreen rounded text-zenGreen text-sm">Bias Mitigation</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 
     <!-- Projects Section -->
-    <section id="projects" class="posts">
+    <!-- <section id="projects" class="posts">
         <div class="container">
             <h2 class="section-title">AI Projects</h2>
             <div class="posts-grid">
-                <article class="post-card terminal-window" data-modal="project1">
+                Project 1 -->
+                <!-- <article class="post-card terminal-window" data-modal="project1">
                     <div class="post-content">
                         <h3 class="post-title">Early Detection of Signs of Anorexia based on Social Media Comments using Incremental Learning</h3>
                         <p class="post-excerpt">Built ML and Deep Learning models to detect signs of anorexia in Reddit posts using CLEF eRisk 2019 dataset, with online training for real-world adaptability.</p>
@@ -119,10 +247,10 @@
                             <span class="cursor">▊</span>
                         </a>
                     </div>
-                </article>
+                </article> -->
 
-                <!-- Project Details Modal -->
-                <div id="project1" class="modal">
+                <!-- Project 1 Details Modal -->
+                <!-- <div id="project1" class="modal">
                     <div class="modal-content terminal-window">
                         <div class="modal-header">
                             <div class="terminal-buttons">
@@ -186,20 +314,109 @@
                         </div>
                     </div>
                 </div>
-
-                <article class="post-card terminal-window" data-modal="project2">
+                 -->
+                <!-- Project 2 -->
+                <!-- <article class="post-card terminal-window" data-modal="project2">
                     <div class="post-content">
-                        <h3 class="post-title">Text Summarizer Application</h3>
-                        <p class="post-excerpt">Developed a web app for abstractive text summarization that generates concise, command-based summaries of instructional text.</p>
+                        <h3 class="post-title">Document Intelligence Using RAG</h3>
+                        <p class="post-excerpt">Developed a web application for domain-agnostic document summarization and question answering, with a focus on legal documents. Front-end integration of the QA tool is currently in progress.</p>
                         <a href="#" class="post-link">
                             View Project Details
                             <span class="cursor">▊</span>
                         </a>
                     </div>
-                </article>
+                </article> -->
 
                 <!-- Project 2 Details Modal -->
-                <div id="project2" class="modal">
+                <!-- <div id="project2" class="modal">
+                    <div class="modal-content terminal-window">
+                        <div class="modal-header">
+                            <div class="terminal-buttons">
+                                <span class="terminal-button close-modal"></span>
+                                <span class="terminal-button"></span>
+                                <span class="terminal-button"></span>
+                            </div>
+                            <div class="terminal-title">Document Intelligence Using RAG</div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="project-type">
+                                <span class="label">Project Type:</span>
+                                <span class="tag">AI/ML Application : RAG </span>
+                            </div>
+                            
+                            <div class="project-section">
+                            <h4>Tech Stack and Models</h4>
+                                <ul class="tech-list">
+                                    <li>Python</li>
+                                    <li>Typescript</li>
+                                    <li>LangChain</li>
+                                    <li>LangGraph</li>
+                                    <li>React Bootstrap</li>
+                                    <li>Flask</li>
+                                    <li>Models : Mistral - mistral:latest, all-minilm:l6-v2</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-section">
+                                <h4>Core Feature</h4>
+                                <ul>
+                                    <li>Individual document summaization</li>
+                                    <li>Consolidated/Global document summarization</li>
+                                    <li>Data preprocessing and feature embedding</li>
+                                    <li>LLM Integrartion using RAG - Similarity Search, Chain/Pipeline</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-section">
+                                <h4>Impacts/Results</h4>
+                                <ul>
+                                    <li>Summarizes Documents with 95% accuracy with local model</li>
+                                    <li>QA Tool integration - In Progress</li>
+                                </ul>
+                                <div class="video-wrapper">
+                                    <video id="projectVideo" controls>
+                                        <source src="images/SummaryToolDemo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <h4>Reference</h4>
+                                <ul>
+                                    <li>
+                                        <a href="https://case.law/caselaw/" class="reference-link" target="_blank">Caselaw Access Project</a>
+                                    </li>
+                                    <li>The President and Fellows of Harvard University. "Caselaw Access Project." 2024, [https://case.law/caselaw/]</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-section">
+                                <h4>Code Repository</h4>
+                                <a href="https://github.com/RajithaMuthukrishnan/Document_Intelligence/tree/main" class="repo-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    View on GitHub
+                                    <span class="cursor">▊</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Project 3 -->
+                <!-- <article class="post-card terminal-window" data-modal="project3">
+                    <div class="post-content">
+                        <h3 class="post-title">Text Summarizer Application</h3>
+                        <p class="post-excerpt">Developed and fine-tuned a BART model for abstractive text summarization that generates concise, command-based summaries of instructional text.</p>
+                        <a href="#" class="post-link">
+                            View Project Details
+                            <span class="cursor">▊</span>
+                        </a>
+                    </div>
+                </article> -->
+
+                <!-- Project 3 Details Modal -->
+                <!-- <div id="project3" class="modal">
                     <div class="modal-content terminal-window">
                         <div class="modal-header">
                             <div class="terminal-buttons">
@@ -253,9 +470,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-                <article class="post-card terminal-window" data-modal="project3">
+                <!-- Project 4 -->
+                <!-- <article class="post-card terminal-window" data-modal="project4">
                     <div class="post-content">
                         <h3 class="post-title">Semantic segmentation using lightweight Gated-Shape CNN model</h3>
                         <h2 class="post-subtitle">Urban Scene Understanding for Autonomous Driving</h2>
@@ -265,10 +483,10 @@
                             <span class="cursor">▊</span>
                         </a>
                     </div>
-                </article>
+                </article> -->
 
-                <!-- Project 3 Details Modal -->
-                <div id="project3" class="modal">
+                <!-- Project 4 Details Modal -->
+                <!-- <div id="project4" class="modal">
                     <div class="modal-content terminal-window">
                         <div class="modal-header">
                             <div class="terminal-buttons">
@@ -345,17 +563,292 @@ Recognition (CVPR), 2018, pp. 4510-4520</li>
                     </div>
                 </div>
             </div>
+        </div> -->
+    <!-- </section> -- -->
+    <section id="projects" class="py-20 bg-zenBlack">
+        <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-light text-center mb-12">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+             <!-- *** Project Card *** -->
+            <div class="bg-zenGray border border-zenGreen rounded-lg overflow-hidden hover:-translate-y-1 shadow-lg transition">
+            <div class="p-6">
+                <h3 class="text-zenGreen text-xl mb-2">Early Detection of Signs of Anorexia based on Social Media Comments using Incremental Learning</h3>
+                <p class="text-gray-300 text-sm mb-4">
+                ML and Deep Learning models to detect signs of anorexia in Reddit posts using CLEF eRisk 2019 dataset, with online training for real-world adaptability.
+                </p>
+                <button onclick="openModal('project1')" 
+                class="inline-flex items-center text-zenGreen hover:underline">
+                View Details
+                <span class="ml-2">▊</span>
+                </button>
+            </div>
+            </div>
+            <!-- Modal (hidden by default, add `flex` to show) -->
+            <div id="project1" 
+                class="fixed inset-0 bg-zenBlack bg-opacity-80 hidden items-center justify-center z-50 p-4"
+                onclick="outsideClick(event, 'project1')">
+            
+            <div class="bg-zenGray text-zenText rounded-lg shadow-lg w-full max-w-2xl border border-zenGreen 
+                        max-h-[90vh] overflow-y-auto p-6"
+                onclick="event.stopPropagation()">
+                <h2 class="text-2xl text-zenGreen mb-4">Early Detection of Signs of Anorexia based on Social Media Comments using Incremental Learning</h2>
+                <!-- Modal Body -->
+                <div class="space-y-6">
+                <!-- Project Type -->
+                <div>
+                    <span class="font-semibold text-zenGreen">Project Type:</span>
+                    <span class="ml-2">AI/ML Application</span>
+                </div>
+                <!-- Tech Stack -->
+                <div>
+                    <h4 class="text-lg font-semibold text-zenGreen mb-2">Tech Stack</h4>
+                    <ul class="list-disc list-inside text-zenText space-y-1">
+                    <li>Fine-tuned BART model</li>
+                    <li>HuggingFace</li>
+                    <li>PyTorch</li>
+                    <li>Django</li>
+                    <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+                <!-- Core Features -->
+                <div>
+                    <h4 class="text-lg font-semibold text-zenGreen mb-2">Core Features</h4>
+                    <ul class="list-disc list-inside text-zenText space-y-1">
+                    <li>Abstractive text summarization</li>
+                    <li>Command-based summary generation</li>
+                    <li>User-friendly web interface</li>
+                    <li>Responsive design</li>
+                    </ul>
+                </div>
+                <!-- Impacts/Results -->
+                <div>
+                    <h4 class="text-lg font-semibold text-zenGreen mb-2">Impacts/Results</h4>
+                    <ul class="list-disc list-inside text-zenText">
+                    <li>40% Reduction in Review Time</li>
+                    </ul>
+                </div>
+                <!-- Video -->
+                <!-- <div>
+                    <video id="project1Video" controls class="w-full rounded">
+                    <source src="images/RedSummaryTool.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </div> -->
+                <!-- Code Repository -->
+                <div>
+                    <h4 class="text-lg font-semibold text-zenGreen mb-2">Code Repository</h4>
+                    <a href="https://github.com/RajithaMuthukrishnan/Text_Summarizer_App" 
+                        target="_blank"
+                        class="inline-flex items-center px-4 py-2 border-2 border-zenGreen bg-zenBlack text-zenGreen rounded transition hover:bg-zenGray">
+
+                        <i class="fab fa-github mr-2"></i>
+                        View on GitHub
+                        <span class="ml-2">▊</span>
+                    </a>
+                </div>
+                </div>
+
+                <!-- Close Button -->
+                <div class="mt-8 text-center">
+                <button onclick="closeModal('project1')" 
+                        class="px-4 py-2 bg-zenGreen text-zenBlack rounded hover:bg-zenGreenLight">
+                    Close
+                </button>
+                </div>
+            </div>
+            </div>
+        
+            <!-- *** Project Card *** -->
+            <div class="bg-zenGray border border-zenGreen rounded-lg overflow-hidden hover:-translate-y-1 shadow-lg transition">
+            <div class="p-6">
+                <h3 class="text-zenGreen text-xl mb-2">Document Intelligence Using RAG</h3>
+                <p class="text-gray-300 text-sm mb-4">
+                An LLM powered web application for domain-agnostic document intelligence. This specific use case is for legal documents, provides individual document / global summary using RAG.
+                </p>
+                <button onclick="openModal('project2')" 
+                class="inline-flex items-center text-zenGreen hover:underline">
+                View Details
+                <span class="ml-2">▊</span>
+                </button>
+            </div>
+            </div>
+            <!-- Modal (hidden by default, add `flex` to show) -->
+            <div id="project2" 
+                class="fixed inset-0 bg-zenBlack bg-opacity-80 hidden items-center justify-center z-50 p-4"
+                onclick="outsideClick(event, 'project2')">
+            
+            <div class="bg-zenGray text-zenText rounded-lg shadow-lg w-full max-w-2xl border border-zenGreen 
+                        max-h-[90vh] overflow-y-auto p-6"
+                onclick="event.stopPropagation()">
+                <h2 class="text-2xl text-zenGreen mb-4">Document Intelligence Using RAG</h2>
+                <!-- Modal Body -->
+                <div class="space-y-6">
+                <!-- Project Type -->
+                <div>
+                    <span class="font-semibold text-zenGreen">Project Type:</span>
+                    <span class="ml-2">AI/ML Application</span>
+                </div>
+                <!-- Tech Stack -->
+                <div>
+                    <h4 class="text-lg font-semibold text-zenGreen mb-2">Tech Stack</h4>
+                    <ul class="list-disc list-inside text-zenText space-y-1">
+                    <li>Fine-tuned BART model</li>
+                    <li>HuggingFace</li>
+                    <li>PyTorch</li>
+                    <li>Django</li>
+                    <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+                <!-- Core Features -->
+                <div>
+                    <h4 class="text-lg font-semibold text-zenGreen mb-2">Core Features</h4>
+                    <ul class="list-disc list-inside text-zenText space-y-1">
+                    <li>Abstractive text summarization</li>
+                    <li>Command-based summary generation</li>
+                    <li>User-friendly web interface</li>
+                    <li>Responsive design</li>
+                    </ul>
+                </div>
+                <!-- Impacts/Results -->
+                <div>
+                    <h4 class="text-lg font-semibold text-zenGreen mb-2">Impacts/Results</h4>
+                    <ul class="list-disc list-inside text-zenText">
+                    <li>40% Reduction in Review Time</li>
+                    </ul>
+                </div>
+                <!-- Video -->
+                <div>
+                    <video id="project2Video" controls class="w-full rounded">
+                    <source src="images/SummaryToolDemo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Code Repository -->
+                <div>
+                    <h4 class="text-lg font-semibold text-zenGreen mb-2">Code Repository</h4>
+                    <a href="https://github.com/RajithaMuthukrishnan/Document_Intelligence" 
+                        target="_blank"
+                        class="inline-flex items-center px-4 py-2 border-2 border-zenGreen bg-zenBlack text-zenGreen rounded transition hover:bg-zenGray">
+
+                        <i class="fab fa-github mr-2"></i>
+                        View on GitHub
+                        <span class="ml-2">▊</span>
+                    </a>
+                </div>
+                </div>
+
+                <!-- Close Button -->
+                <div class="mt-8 text-center">
+                <button onclick="closeModal('project2')" 
+                        class="px-4 py-2 bg-zenGreen text-zenBlack rounded hover:bg-zenGreenLight">
+                    Close
+                </button>
+                </div>
+            </div>
+            </div>
+
+             <!-- *** Project Card *** -->
+            <div class="bg-zenGray border border-zenGreen rounded-lg overflow-hidden hover:-translate-y-1 shadow-lg transition">
+            <div class="p-6">
+                <h3 class="text-zenGreen text-xl mb-2">Document Intelligence Using RAG</h3>
+                <p class="text-gray-300 text-sm mb-4">
+                An LLM powered web application for domain-agnostic document intelligence. This specific use case is for legal documents, provides individual document / global summary using RAG.
+                </p>
+                <button onclick="openModal('project2')" 
+                class="inline-flex items-center text-zenGreen hover:underline">
+                View Details
+                <span class="ml-2">▊</span>
+                </button>
+            </div>
+            </div>
+            <!-- Modal (hidden by default, add `flex` to show) -->
+            <div id="project2" 
+                class="fixed inset-0 bg-zenBlack bg-opacity-80 hidden items-center justify-center z-50 p-4"
+                onclick="outsideClick(event, 'project2')">
+            
+            <div class="bg-zenGray text-zenText rounded-lg shadow-lg w-full max-w-2xl border border-zenGreen 
+                        max-h-[90vh] overflow-y-auto p-6"
+                onclick="event.stopPropagation()">
+                <h2 class="text-2xl text-zenGreen mb-4">Document Intelligence Using RAG</h2>
+                <!-- Modal Body -->
+                <div class="space-y-6">
+                <!-- Project Type -->
+                <div>
+                    <span class="font-semibold text-zenGreen">Project Type:</span>
+                    <span class="ml-2">AI/ML Application</span>
+                </div>
+                <!-- Tech Stack -->
+                <div>
+                    <h4 class="text-lg font-semibold text-zenGreen mb-2">Tech Stack</h4>
+                    <ul class="list-disc list-inside text-zenText space-y-1">
+                    <li>Fine-tuned BART model</li>
+                    <li>HuggingFace</li>
+                    <li>PyTorch</li>
+                    <li>Django</li>
+                    <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+                <!-- Core Features -->
+                <div>
+                    <h4 class="text-lg font-semibold text-zenGreen mb-2">Core Features</h4>
+                    <ul class="list-disc list-inside text-zenText space-y-1">
+                    <li>Abstractive text summarization</li>
+                    <li>Command-based summary generation</li>
+                    <li>User-friendly web interface</li>
+                    <li>Responsive design</li>
+                    </ul>
+                </div>
+                <!-- Impacts/Results -->
+                <div>
+                    <h4 class="text-lg font-semibold text-zenGreen mb-2">Impacts/Results</h4>
+                    <ul class="list-disc list-inside text-zenText">
+                    <li>40% Reduction in Review Time</li>
+                    </ul>
+                </div>
+                <!-- Images -->
+                <div>
+                    <video id="project2Video" controls class="w-full rounded">
+                    <source src="images/SummaryToolDemo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Code Repository -->
+                <div>
+                    <h4 class="text-lg font-semibold text-zenGreen mb-2">Code Repository</h4>
+                    <a href="https://github.com/RajithaMuthukrishnan/Document_Intelligence" 
+                        target="_blank"
+                        class="inline-flex items-center px-4 py-2 border-2 border-zenGreen bg-zenBlack text-zenGreen rounded transition hover:bg-zenGray">
+
+                        <i class="fab fa-github mr-2"></i>
+                        View on GitHub
+                        <span class="ml-2">▊</span>
+                    </a>
+                </div>
+                </div>
+
+                <!-- Close Button -->
+                <div class="mt-8 text-center">
+                <button onclick="closeModal('project2')" 
+                        class="px-4 py-2 bg-zenGreen text-zenBlack rounded hover:bg-zenGreenLight">
+                    Close
+                </button>
+                </div>
+            </div>
+            </div>
+            <!-- Add more project cards here -->
+
         </div>
     </section>
+
     
     <!-- Posts Section -->
-    <section id="posts" class="posts">
+    <!-- <section id="posts" class="posts">
         <div class="container">
             <h2 class="section-title">Blog Posts</h2>
             <div class="posts-grid">
-                <article class="post-card terminal-window">
+                <article class="post-card terminal-window"> -->
                     <!-- Post card cover image -->
-                    <img src="images/Sustainable_AI_RM.png" alt="Sustainable AI cover" class="post-card-cover">
+                    <!-- <img src="images/Sustainable_AI_RM.png" alt="Sustainable AI cover" class="post-card-cover">
 
                     <div class="post-content">
                         <h3 class="post-title">Building LLM-Powered Applications Responsibly</h3>
@@ -369,10 +862,34 @@ Recognition (CVPR), 2018, pp. 4510-4520</li>
                 </article>
             </div>
         </div>
-    </section>
+    </section> -->
+    <section id="posts" class="py-20 bg-zenBlack">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-light text-center mb-12">Blog Posts</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Blog Card -->
+        <article class="bg-zenGray border border-zenGreen rounded-lg overflow-hidden hover:-translate-y-1 shadow-lg transition">
+          <img src="images/Sustainable_AI_RM.png" alt="Sustainable AI cover" class="w-full aspect-video object-cover">
+          <div class="p-6">
+            <h3 class="text-zenGreen text-xl mb-2">Building LLM-Powered Applications Responsibly</h3>
+            <p class="text-gray-300 text-sm mb-4">
+              LLMs are powerful tools, but every API call comes with an unseen cost. Explore mindful practices for sustainability in AI.
+            </p>
+            <a href="posts/building-llm-powered-apps.html" 
+               class="inline-flex items-center text-zenGreen hover:underline">
+              Read More <span class="ml-2">▊</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Add more blog cards here -->
+      </div>
+    </div>
+  </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section terminal-style">
@@ -398,8 +915,40 @@ Recognition (CVPR), 2018, pp. 4510-4520</li>
                 <p><span class="prompt-sign">$</span> Rajitha Muthukrishnan AI Portfolio. All rights reserved."</p>
             </div>
         </div>
-    </footer>
+    </footer> -->
+    <footer class="bg-zenBlack py-6 text-center text-gray-400 border-t border-zenGreen">
+    <p>© 2025 Rajitha Muthukrishnan | Built with TailwindCSS</p>
+  </footer>
 
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+     <script>
+    function openModal(id) {
+      document.getElementById(id).classList.remove("hidden");
+      document.getElementById(id).classList.add("flex");
+    }
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      const video = modal.querySelector("video");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    }
+    // Close when clicking outside content
+    function outsideClick(event, id) {
+        const modal = document.getElementById(id);
+        const video = modal.querySelector("video");
+        if (event.target === modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
+        }
+    }
+  </script>
 </body>
 </html>

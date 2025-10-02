@@ -388,4 +388,40 @@ document.addEventListener('DOMContentLoaded', function() {
             chevron.style.transform = 'translateY(0)';
         });
     });
+
+    // Video impacts / results
+    // document.addEventListener("DOMContentLoaded", () => {
+    //     // Find all modals
+    //     const modals = document.querySelectorAll(".modal");
+    //     console.log(modals)
+
+    //     modals.forEach((modal) => {
+    //         const video = modal.querySelector("video");
+    //         console.log(video)
+
+    //         // Close modal and reset video on outside click
+    //         window.addEventListener("click", (event) => {
+    //             if (event.target === modal) {
+    //                 modal.style.display = "none";
+                
+    //                 if (video) {
+    //                     video.pause();
+    //                     video.currentTime = 0; // Reset video to start
+    //                 }
+    //             }
+    //         });
+    //     });
+    // });
+    const modal = document.querySelectorAll("project2");
+    console.log(modal)
+    const video = document.getElementById('projectVideo');
+
+    // Optionally, handle closing by clicking outside the modal
+    window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        video.pause();
+        video.currentTime = 0;
+        modal.style.display = 'none';
+    }
+    });
 });
