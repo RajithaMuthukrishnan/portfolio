@@ -272,7 +272,7 @@
                     <h4 class="text-lg font-semibold text-zenBlue mb-2">Impacts/Results</h4>
                     <ul class="list-disc list-inside text-zenText">
                         <li>Summarizes Documents with 95% accuracy with local model</li>
-                        <li>QA Tool integration - In Progress</li>
+                        <li>QA Tool forntend integration - In Progress</li>
                     </ul>
                 </div>
                 <!-- Video -->
@@ -506,6 +506,129 @@ Recognition (CVPR), 2018, pp. 4510-4520</li>
                 <!-- Close Button -->
                 <div class="mt-8 text-center">
                 <button onclick="closeModal('project4')" 
+                        class="px-4 py-2 bg-zenGreen text-zenBlack rounded hover:bg-zenGreenLight">
+                    Close
+                </button>
+                </div>
+            </div>
+            </div>
+
+            <!-- *** Project Card *** -->
+            <div class="bg-zenGray border border-zenGreen rounded-lg overflow-hidden hover:-translate-y-1 shadow-lg transition">
+            <div class="p-6">
+                <h3 class="text-zenGreen text-xl mb-2 leading-snug">Object Orientation Detection Using Transfer Learning</h3>
+                <p class="text-zenText text-md mb-4">
+                Developed a deep learning model leveraging Siamese Neural Networks and MobileNetV2 transfer learning to predict object orientation differences with high accuracy.
+                </p>
+                <button onclick="openModal('project5')" 
+                class="inline-flex items-center text-zenGreenLight hover:text-zenGreen">
+                View Details
+                <span class="ml-2">▊</span>
+                </button>
+            </div>
+            </div>
+            <!-- Modal (hidden by default, add `flex` to show) -->
+            <div id="project5" 
+                class="fixed inset-0 bg-zenBlack bg-opacity-80 hidden items-center justify-center z-50 p-4"
+                onclick="outsideClick(event, 'project4')">
+            
+            <div class="bg-zenGray text-zenText rounded-lg shadow-lg w-full max-w-2xl border border-zenGreen 
+                        max-h-[90vh] overflow-y-auto p-6"
+                onclick="event.stopPropagation()">
+                <h2 class="text-2xl text-zenGreen mb-4">Object Orientation Detection Using Transfer Learning</h2>
+                <!-- Modal Body -->
+                <div class="space-y-6">
+                <!-- Project Type -->
+                <div>
+                    <span class="font-semibold text-zenBlue">Project Type:</span>
+                    <span class="ml-2">Research: Model Development</span>
+                </div>
+                <!-- Tech Stack -->
+                <div>
+                    <h4 class="text-lg font-semibold text-zenBlue mb-2">Tech Stack</h4>
+                    <ul class="list-disc list-inside text-zenText space-y-1">
+                        <li>Python</li>
+                        <li>Scikit-Image</li>
+                        <li>TensorFlow/Keras</li>
+                        <li>Siamese Neural Networks</li>
+                        <li>MobileNetV2 (Transfer Learning)</li>
+                        <li>Tum-LCP dataset</li>
+                    </ul>
+                </div>
+                <!-- Core Features -->
+                <div>
+                    <h4 class="text-lg font-semibold text-zenBlue mb-2">Core Features</h4>
+                    <ul class="list-disc list-inside text-zenText space-y-1">
+                        <li>Utilized Tum-LCP dataset for training and evaluation.</li>
+                        <li>Engineered a Siamese architecture to compare object pairs and predict angular differences.</li>
+                        <li>Integrated transfer learning (MobileNetV2) for efficient feature extraction.</li>
+                    </ul>
+                </div>
+                <!-- Impacts/Results -->
+                <div>
+                    <h4 class="text-lg font-semibold text-zenBlue mb-2">Impacts/Results</h4>
+                    <ul class="list-disc list-inside text-zenText">
+                        <li>Achieved a Mean Squared Error (MSE) of 0.0129, indicating high precision in angle prediction.</li>
+                        <li>Demonstrated scalable approach for tasks requiring fine-grained orientation detection in images.</li>
+                    </ul>
+                </div>
+                <!-- Images -->
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Image 1 -->
+                    <div class="flex flex-col items-center">
+                        <img src="assets/init_img.png" alt="Position 1" class="rounded shadow" />
+                        <p class="mt-2 text-sm text-gray-300 text-center">
+                        Position 1
+                        </p>
+                    </div>
+
+                    <!-- Image 2 -->
+                    <div class="flex flex-col items-center">
+                        <img src="assets/change_img.png" alt="Position 2" class="rounded shadow" />
+                        <p class="mt-2 text-sm text-gray-300 text-center">
+                        Position 2
+                        </p>
+                    </div>
+                </div>
+                <!-- Image 3 -->
+                <div class="flex items-center">
+                    <img src="assets/orientation_result.png" alt="Orientation result" class="rounded shadow" />
+                </div>
+                <p class="mt-2 text-sm text-gray-300 text-center">
+                        Results
+                </p>
+
+                <!-- References -->
+                 <div>
+                    <h4 class="text-md font-semibold text-zenBlue mb-2">References</h4>
+                    <ul class="list-disc list-inside text-zenText">
+                        <li>
+                            <a href="http://campar.in.tum.de/personal/slavcheva/3d-printed-dataset/index.html" class="underline decoration-zenGreen" target="_blank">LeopardSynth.Turntable - Archived Dataset</a>
+                        </li>
+                        <li>M. Slavcheva, W. Kehl, N. Navab, and S. Ilic, “SDF-2-SDF: Highly Accurate 3D Object
+Reconstruction,” in European Conference on Computer Vision (ECCV), 2016.</li>
+                        <li>Mark Sandler, Andrew Howard, Menglong Zhu, Andrey Zhmoginov,
+Liang-Chieh Chen, “MobileNetV2: Inverted Residuals and Linear Bottlenecks”,
+in The IEEE Conference on Computer Vision and Pattern
+Recognition (CVPR), 2018, pp. 4510-4520</li>
+                </div>
+                <!-- Code Repository -->
+                <div>
+                    <h4 class="text-lg font-semibold text-zenBlue mb-2">Code Repository</h4>
+                    <a href="https://github.com/RajithaMuthukrishnan/Object_Orientation_Detection/blob/main/Orientation_Detection_Notebook.ipynb" 
+                        target="_blank"
+                        class="inline-flex items-center px-4 py-2 border-2 border-zenGreen bg-zenBlack text-zenGreen rounded transition hover:bg-zenGray">
+
+                        <i class="fab fa-github mr-2"></i>
+                        View on GitHub
+                        <span class="ml-2">▊</span>
+                    </a>
+                </div>
+                </div>
+
+                <!-- Close Button -->
+                <div class="mt-8 text-center">
+                <button onclick="closeModal('project5')" 
                         class="px-4 py-2 bg-zenGreen text-zenBlack rounded hover:bg-zenGreenLight">
                     Close
                 </button>
